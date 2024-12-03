@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="/css/estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+</head>
+
+<body>
+    <header>
+        <nav class="black">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <a href="index.html" class="brand-logo">
+                        <img src="/imagenes/world-map-297315__340.webp" alt="Logo" style="height: 30px;">
+                    </a>
+                    <ul id="nav-mobile" class="right hide-on-med-and-down">
+                        <li><a href="/Paginas/index.html">Inicio</a></li>
+                        <li><a href="/Paginas/BuscarPorNombre.html">Buscar Países</a></li>
+                        <li><a href="/Paginas/BuscarPorRegion.html">Por Región</a></li>
+                    </ul>
+
+            
+                    <a href="#" data-target="mobile-nav" class="sidenav-trigger">
+                        <i class="material-icons">menu</i>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <ul class="sidenav" id="mobile-nav">
+        <li><a href="/Paginas/index.html">Inicio</a></li>
+        <li><a href="/Paginas/BuscarPorNombre.html">Buscar Países</a></li>
+        <li><a href="/Paginas/BuscarPorRegion.html">Por Región</a></li>
+    </ul>
+
+    <!-- Main content -->
+    <main class="container">
+        <h4 class="center-align">Buscar País Por Región</h4>
+
+        <!-- Select de Regiones -->
+        <div class="input-field cboRegiones ">
+            <select id="lblRegion" required>
+                <option value="" disabled selected>Región</option>
+                <option value="Asia">Asia</option>
+                <option value="Europe">Europa</option>
+                <option value="Americas">América</option>
+                <option value="Africa">África</option>
+                <option value="Oceania">Oceanía</option>
+            </select>
+            <label for="lblRegion" class="black-text">Seleccione una Región</label>
+        </div>
+
+        <!-- Lista de países -->
+        <div class="row center-align">
+            <div class="col s12 m12">
+                <div class="card">
+                    <div class="card-content">
+                        <ul id="listaPaises">
+                            <!-- Aquí se carga la lista de los países -->
+                        </ul>
+                    </div>
+                    <div class="card-action">
+                        <a href="BuscarPorNombre.html">Volver a Lista de Países</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal para detalles del país -->
+        <div id="modalDetalles" class="modal">
+            <div class="modal-content">
+                <h5>Detalles del País</h5>
+                <p id="detallePais"></p>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class="blue modal-close waves-effect waves-red btn-flat">Cerrar</a>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="page-footer black">
+        <div class="footer-copyright">
+            <div class="container  center-align">
+                <span class="white-text">© 2024 Jesus Moscoso.</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/logica/index.js"></script>
+    <script src="/logica/buscarRegion.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Inicialización de modales
+            const modals = document.querySelectorAll('.modal');
+            M.Modal.init(modals);
+
+            // Inicialización del select
+            const selects = document.querySelectorAll('select');
+            M.FormSelect.init(selects);
+        });
+
+        // Inicialización del menú lateral (sidenav)
+        document.addEventListener('DOMContentLoaded', function() {
+            var sidenav = document.querySelectorAll('.sidenav');
+            M.Sidenav.init(sidenav);
+        });
+    </script>
+</body>
+
+</html>

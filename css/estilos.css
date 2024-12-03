@@ -1,0 +1,52 @@
+
+body {
+    background: url(/imagenes/illustration-famous-monument-world.jpg) no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    color: black;
+
+}
+
+.boton-derecha {
+    float: right;  
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+
+li {
+    height: 40px;
+    margin: 10px 0;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2); 
+    text-align: center;
+    line-height: 40px; 
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+    padding: 5px;
+}
+
+
+.card-content li:hover {
+    transform: scale(1.05);  
+}
+
+
+.modal{
+    max-width: 500px;
+    max-height: 400px;
+}
+
+.card{
+    height: 500px;
+    overflow-y: scroll;
+    background-color: transparent !important;
+    backdrop-filter: blur(10px) !important;
+}
+
+.cboRegiones{
+    max-width: 400px;
+}
+
+
+
