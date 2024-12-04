@@ -1,13 +1,10 @@
 
 body {
     background: url(http://st2.depositphotos.com/1008648/9902/i/450/depositphotos_99021740-Famous-monuments-of-the-world.jpg) no-repeat center fixed;
-    
-
     background-size: cover;
     margin: 0;
     padding: 0;
     color: black;
-
 }
 
 .boton-derecha {
@@ -16,17 +13,11 @@ body {
     cursor: pointer;
 }
 
-
-
-
-
-
 .modal{
     max-width: 500px;
     max-height: 400px;
 }
 
-/* Estilo para las tarjetas */
 .card {
     height: 200px; 
     background-color: transparent !important; 
@@ -39,9 +30,6 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
     background-color: rgba(255, 255, 255, 0.1); 
 }
-
-
-
 
 .cboRegiones{
     max-width: 400px;
