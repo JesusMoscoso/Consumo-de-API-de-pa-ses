@@ -90,7 +90,7 @@ window.addEventListener('load', () => {
 
     if (paisSeleccionado) {
         const lblPais = document.getElementById('lblPais');
-        lblPais.value = paisSeleccionado.name.common;  // nombre del país
+        lblPais.value = paisSeleccionado.name.common;  // nombre del pais
 
         setTimeout(() => {
             BuscarPais();  // Realiza la búsqueda después de que lblPais se haya actualizado
@@ -127,7 +127,7 @@ function mostrarDetalles(pais) {
         // Guardamos el país seleccionado en localStorage
         localStorage.setItem('paisSeleccionado', JSON.stringify(pais));
 
-        // verificamos si los datos del país están disponibles en localStorage
+        // verificamos si los datos del pais estan disponibles en localStorage
         const paisesAlmacenados = JSON.parse(localStorage.getItem('paises'));
 
         //si se borraron o si no hay6 nada entonces mostramos un mensaje,
