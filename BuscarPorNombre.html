@@ -29,21 +29,22 @@
                 </div>
             </div>
         </nav>
+         <!-- Sidenav -->
+        <ul class="sidenav" id="mobile-nav">
+            <li><a href="index.html"><i class="material-icons">home</i>Inicio</a></li>
+            <li><a href="BuscarPorNombre.html"><i class="material-icons">search</i>Buscar Países</a></li>
+            <li><a href="BuscarPorRegion.html"><i class="material-icons">public</i>Por Región</a></li>
+        </ul>
     </header>
-
-    <ul class="sidenav" id="mobile-nav">
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="BuscarPorNombre.html">Buscar Países</a></li>
-        <li><a href="BuscarPorRegion.html">Por Región</a></li>
-    </ul>
 
     <main class="container">
         <h4 class="center-align">Lista de Países</h4>
         
     
         <div class="row">
-            <form class="col s12 m4">
+            <form class="col s12 m12 white">
                 <div class="input-field">
+                    <p><strong>Ingrese el nombre del Pais</strong></p>
                     <input id="lblPais" type="text" class="validate">
                     <label for="lblPais" class="black-text"></label>
                     <button id="btnBuscar" class="btn waves-effect waves-light blue" type="button">Buscar</button>
@@ -74,13 +75,18 @@
         </div>
     </main>
 
-    <!-- Footer -->
+   
     <footer class="page-footer black">
         <div class="footer-copyright">
-            <div class="container center-align">
+            <div class="container  center-align">
                 <span class="white-text">© 2024 Jesus Moscoso.</span>
+                <ul >
+                    <li ><a href="index.html" class="white-text">Inicio</a></li>
+                    <li><a href="BuscarPorNombre.html" class="white-text">Buscar Países</a></li>
+                    <li><a href="BuscarPorRegion.html" class="white-text">Por Región</a></li>
+                </ul>
             </div>
-     </div>
+        </div>
     </footer>
     
     <!-- Scripts -->

@@ -31,30 +31,36 @@
                 </div>
             </div>
         </nav>
+
+         <!-- Sidenav -->
+        <ul class="sidenav" id="mobile-nav">
+            <li><a href="index.html"><i class="material-icons">home</i>Inicio</a></li>
+            <li><a href="BuscarPorNombre.html"><i class="material-icons">search</i>Buscar Países</a></li>
+            <li><a href="BuscarPorRegion.html"><i class="material-icons">public</i>Por Región</a></li>
+        </ul>
     </header>
 
-    <ul class="sidenav" id="mobile-nav">
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="BuscarPorNombre.html">Buscar Países</a></li>
-        <li><a href="BuscarPorRegion.html">Por Región</a></li>
-    </ul>
+   
 
     <!-- Main content -->
     <main class="container">
+
         <h4 class="center-align">Buscar País Por Región</h4>
 
-        <!-- Select de Regiones -->
-        <div class="input-field cboRegiones ">
-            <select id="lblRegion" required>
-                <option value="" disabled selected>Región</option>
+        <div class="input-field white z-depth-1">
+            <select id="lblRegion" required class="black-text">
+                <option value="" disabled selected>Seleccione una región</option>
                 <option value="Asia">Asia</option>
                 <option value="Europe">Europa</option>
                 <option value="Americas">América</option>
                 <option value="Africa">África</option>
                 <option value="Oceania">Oceanía</option>
             </select>
-            <label for="lblRegion" class="black-text">Seleccione una Región</label>
+
+            <label for="lblRegion"></label>
         </div>
+        
+
 
         <!-- Lista de países -->
         <div class="row center-align">
@@ -85,11 +91,16 @@
 
     </main>
 
-    <!-- Footer -->
+   
     <footer class="page-footer black">
         <div class="footer-copyright">
             <div class="container  center-align">
                 <span class="white-text">© 2024 Jesus Moscoso.</span>
+                <ul >
+                    <li ><a href="index.html" class="white-text">Inicio</a></li>
+                    <li><a href="BuscarPorNombre.html" class="white-text">Buscar Países</a></li>
+                    <li><a href="BuscarPorRegion.html" class="white-text">Por Región</a></li>
+                </ul>
             </div>
         </div>
     </footer>
