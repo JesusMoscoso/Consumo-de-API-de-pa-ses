@@ -35,7 +35,7 @@ function CargarListaPaises(paisesAlmacenados) {
     paisesAlmacenados.forEach(pais => {
         // creamos el contenedor de la tarjeta
         const tarjeta = document.createElement('div');
-        tarjeta.classList.add('col', 's12', 'm3'); 
+        tarjeta.classList.add('col', 's12', 'm4'); 
 
         // creamos la estructura de la tarjeta
         const card = document.createElement('div');
