@@ -5,6 +5,9 @@ body {
     margin: 0;
     padding: 0;
     color: black;
+    position: relative;
+    padding-bottom: 15em;
+    min-height: 100vh;
 }
 
 .boton-derecha {
@@ -35,3 +38,8 @@ body {
     max-width: 400px;
 }
 
+footer{
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+}
