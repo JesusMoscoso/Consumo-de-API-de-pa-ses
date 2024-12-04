@@ -24,35 +24,66 @@ async function obtenerPaises() {
 
 obtenerPaises();
 
-//esta funcion es para cargar la lista de paises.
+// esta funcion es para cargar la lista de paises.
 function CargarListaPaises(paisesAlmacenados) {
-    //este la ul en donde se van a cargar la los li.
+    // este es el contenedor donde se van a cargar las tarjetas.
     const lista = document.getElementById('listaPaises');
-    //vaciamos el contenedor.
+    // vaciamos el contenedor.
     lista.innerHTML = '';
 
-    //recorremos los paisesAlmacenados
+    // recorremos los países almacenados
     paisesAlmacenados.forEach(pais => {
-        //creamos un li por cada iteracion
-        const item = document.createElement('li');
-        //creamos un boton por cada iteracion
-        const botonDetalles = document.createElement('button');
-    
-        botonDetalles.textContent = 'Detalles';
-        botonDetalles.classList.add('btn', 'waves-effect', 'waves-light', 'blue', 'boton-derecha');
+        // creamos el contenedor de la tarjeta
+        const tarjeta = document.createElement('div');
+        tarjeta.classList.add('col', 's12', 'm3'); 
 
-        //le agregamos el evento a cada boton y le pasamos todo el pais
+        // creamos la estructura de la tarjeta
+        const card = document.createElement('div');
+        card.classList.add('card');
+
+        // creamos el contenido de la tarjeta
+        const cardContent = document.createElement('div');
+        cardContent.classList.add('card-content');
+
+        // creamos el nombre del pais
+        const nombrePais = document.createElement('span');
+        nombrePais.classList.add('card-title');
+        nombrePais.textContent = pais.name.common;
+
+        // agregamos el nombre del pais a la tarjeta
+        cardContent.appendChild(nombrePais);
+
+        // agregamos el contenido a la tarjeta
+        card.appendChild(cardContent);
+
+    
+        const cardAction = document.createElement('div');
+        cardAction.classList.add('card-action');
+
+        
+        const botonDetalles = document.createElement('a');
+        botonDetalles.classList.add('btn', 'blue');
+        botonDetalles.textContent = 'Detalles';
+
+        // le agregamos el evento a cada boton
         botonDetalles.addEventListener('click', () => {
-            mostrarDetalles(pais);  
+            mostrarDetalles(pais);
         });
 
-        //cada li tendra el nombre del pais
-        item.textContent = pais.name.common;
-        
-        item.appendChild(botonDetalles);
-        lista.appendChild(item);
+        // agregamos el boton 
+        cardAction.appendChild(botonDetalles);
+
+        // agregamos la accion a la tarjeta
+        card.appendChild(cardAction);
+
+        // agregamos la tarjeta al div
+        tarjeta.appendChild(card);
+
+        //agregamos la tarjeta a la lista
+        lista.appendChild(tarjeta);
     });
 }
+
 
 window.addEventListener('load', () => {
     const paisSeleccionado = JSON.parse(localStorage.getItem('paisSeleccionado'));

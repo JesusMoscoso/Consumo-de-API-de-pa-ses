@@ -1,6 +1,6 @@
 
 body {
-    background: url(http://st2.depositphotos.com/1008648/9902/i/450/depositphotos_99021740-Famous-monuments-of-the-world.jpg) no-repeat center center fixed;
+    background: url(http://st2.depositphotos.com/1008648/9902/i/450/depositphotos_99021740-Famous-monuments-of-the-world.jpg) no-repeat center fixed;
     
 
     background-size: cover;
@@ -17,21 +17,8 @@ body {
 }
 
 
-li {
-    height: 40px;
-    margin: 10px 0;
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2); 
-    text-align: center;
-    line-height: 40px; 
-    border-radius: 5px;
-    transition: background-color 0.3s, transform 0.3s;
-    padding: 5px;
-}
 
 
-.card-content li:hover {
-    transform: scale(1.05);  
-}
 
 
 .modal{
@@ -39,12 +26,22 @@ li {
     max-height: 400px;
 }
 
-.card{
-    height: 500px;
-    overflow-y: scroll;
-    background-color: transparent !important;
-    backdrop-filter: blur(10px) !important;
+/* Estilo para las tarjetas */
+.card {
+    height: 200px; 
+    background-color: transparent !important; 
+    backdrop-filter: blur(20px) !important; 
+    transition: all 0.3s !important; 
 }
+
+.card:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    background-color: rgba(255, 255, 255, 0.1); 
+}
+
+
+
 
 .cboRegiones{
     max-width: 400px;
